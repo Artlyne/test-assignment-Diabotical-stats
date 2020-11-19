@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "diabotical-stats"
-version = "0.1.0"
+version = "0.2.0"
 description = "get players stats from game Diabotical"
 authors = ["Andrey Martsenius <Artlynee@gmail.com>"]
 packages = [
@@ -9,11 +9,12 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
+requests = "^2.25.0"
 
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.scripts]
-diabotical-stats = "diabotical_stats.scripts.diabotical_stats:main"
+diabotical-stats = "diabotical_stats.scripts.leaderboard:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

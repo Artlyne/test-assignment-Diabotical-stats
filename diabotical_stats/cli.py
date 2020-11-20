@@ -11,5 +11,7 @@ def parse_args():
                         help='choose game mode')
     parser.add_argument('--count', type=int,
                         help='specify the number of records to output')
+    parser.add_argument('--user_id',
+                        help='specify the user id you want to find')
     args = parser.parse_args()
     return args

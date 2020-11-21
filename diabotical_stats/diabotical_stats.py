@@ -1,5 +1,4 @@
 import requests
-import json
 
 
 def get_leaderboard(url: str, parameters: dict, count: int) -> list:
@@ -7,22 +6,7 @@ def get_leaderboard(url: str, parameters: dict, count: int) -> list:
     return data.get('leaderboard')[:count]
 
 
-def remove_userids(leaderboard: list) -> list:
-    for user_stat in leaderboard:
-        user_stat.pop('user_id')
-    return leaderboard
-
-
-def convert_to_json(data: list) -> str:
-    return json.dumps(data, indent=2)
-
-
-def get_stats(url: str, parameters: dict, count: int) -> str:
-    leaderboard = remove_userids(get_leaderboard(url, parameters, count))
-    return convert_to_json(leaderboard)
-
-
-def find_user(leaderboard: list, user_id: str):
+def get_user(leaderboard: list, user_id: str):
     for user in leaderboard:
         if user_id == user['user_id']:
             user.pop('user_id')
@@ -31,17 +15,15 @@ def find_user(leaderboard: list, user_id: str):
         return 'No such user found! Please try again.'
 
 
-def get_user(url: str, parameters: dict, count: int, user_id: str) -> str:
-    leaderboard = get_leaderboard(url, parameters, count)
-    user = find_user(leaderboard, user_id)
-    return convert_to_json(user)
+def remove_userids(leaderboard: list) -> list:
+    for user_stat in leaderboard:
+        user_stat.pop('user_id')
+    return leaderboard
 
 
-def count_players_by_country(url: str, parameters: dict, count: int,
-                             country: str) -> int:
-    leaderboard = get_leaderboard(url, parameters, count)
-    x = 0
+def count_players_by_country(leaderboard: list, country: str) -> int:
+    counter = 0
     for user in leaderboard:
         if user['country'] == country:
-            x += 1
-    return x
+            counter += 1
+    return counter

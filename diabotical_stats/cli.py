@@ -13,5 +13,7 @@ def parse_args():
                         help='specify the number of records to output')
     parser.add_argument('--user_id',
                         help='specify the user id you want to find')
+    parser.add_argument('--country',
+                        help='count the number of players in a given country')
     args = parser.parse_args()
     return args

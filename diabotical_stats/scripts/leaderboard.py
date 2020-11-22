@@ -18,7 +18,7 @@ def main():
     elif parse_args().country:
         result = count_players_by_country(leaderboard, parse_args().country)
     else:
-        result = remove_userids(leaderboard)
+        result = {'leaderboard': remove_userids(leaderboard)}
 
     print(json.dumps(result, indent=2))
 

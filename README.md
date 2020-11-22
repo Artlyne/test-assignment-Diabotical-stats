@@ -1,5 +1,5 @@
 # CLI приложение чтения статистики игроков в Diabotical через API
-![Python CI](https://github.com/Artlyne/test-assignment-Diabotical-stats/blob/master/.github/workflows/pyci.yml/badge.svg)
+[![Github Actions Status](https://github.com/Artlyne/test-assignment-Diabotical-stats/workflows/Python%20CI/badge.svg)
 
 [Diabotical API](https://mtricht.github.io/diabotical-api/#/Leaderboard/get_api_v0_stats_leaderboard)
 ***

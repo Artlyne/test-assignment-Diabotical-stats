@@ -1,4 +1,4 @@
-# CLI приложение чтения статистики игроков в Diabotical через API
+# CLI app for reading player statistics in Diabotical<img src="https://pbs.twimg.com/profile_images/1231999603588947974/sZOe6DPF.png" width="50" height="50">
 ![Github Actions Status](https://github.com/Artlyne/test-assignment-Diabotical-stats/workflows/Python%20CI/badge.svg)
 
 [Diabotical API](https://mtricht.github.io/diabotical-api/#/Leaderboard/get_api_v0_stats_leaderboard)

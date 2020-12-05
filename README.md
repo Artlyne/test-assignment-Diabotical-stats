@@ -3,19 +3,23 @@
 
 [Diabotical API](https://mtricht.github.io/diabotical-api/#/Leaderboard/get_api_v0_stats_leaderboard)
 ***
-В утилите доступны следующие возможности:
-
-- *--mode \<game_mode>* — вывести информацию о всех игроках в данном моде
-
-- *--count \<N>* — ограничить вывод N игроками
-
-- *--user_id \<id>* — найти и вывести информацию о конкретном игроке
-
-- *--country \<country>* — посчитать количество игроков определенной страны
-***
-### Примеры использования
+To install the package, copy the current repository and enter the following command:
 ```
-$ poetry run diabotical-stats --mode r_macguffin --count 3
+make install
+```
+The following features are available in the utility:
+
+- *--mode \<game_mode>* — display information about all players in a given mod
+
+- *--count \<N>* — limit output to N players
+
+- *--user_id \<id>* — find and display information about a specific player
+
+- *--country \<country>* — count the number of players in a certain country
+***
+### Examples
+```
+$ diabotical-stats --mode r_macguffin --count 3
 {
   "leaderboard": [
     {
@@ -52,7 +56,7 @@ $ poetry run diabotical-stats --mode r_macguffin --count 3
 }
 ```
 ```
-$ poetry run diabotical-stats --mode r_macguffin --count 3 --user_id b325363ffe6d46c8840c951b334cc09c
+$ diabotical-stats --mode r_macguffin --count 3 --user_id b325363ffe6d46c8840c951b334cc09c
 {
   "name": "enesy",
   "country": "dk",
@@ -65,6 +69,6 @@ $ poetry run diabotical-stats --mode r_macguffin --count 3 --user_id b325363ffe6
 }
 ```
 ```
-$ poetry run diabotical-stats --mode r_macguffin --count 3 --country dk
+$ diabotical-stats --mode r_macguffin --count 3 --country dk
 1
 ```
